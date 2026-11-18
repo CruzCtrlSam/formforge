@@ -27,3 +27,23 @@ button:focus-visible, input:focus-visible, select:focus-visible { outline-color:
 .walkthrough li+li { margin-top: 6px; }
 .log li::marker { color: var(--secondary); }
 @media (prefers-reduced-motion: reduce) { button { transition: none; } }
+.welcome-hero {
+  min-height: 760px;
+  background: linear-gradient(180deg,rgba(17,21,16,.2),rgba(17,21,16,.05) 45%,rgba(17,21,16,.4)), url("assets/welcome.png") center 65% / cover;
+  position: relative;
+}
+.welcome-hero h1 { font-style: italic; max-width: 11ch; font-size: clamp(2.7rem,9vw,4.8rem); }
+.welcome-hero p { max-width: 30ch; color: var(--ink); }
+.welcome-hero::after { display:none; }
+.start-link { display:inline-block; padding:12px 22px; border-radius:12px; background:var(--accent); color:var(--bg); text-decoration:none; font-weight:800; margin-top:8px; }
+.today-hero { background:linear-gradient(90deg,rgba(17,21,16,.95),rgba(17,21,16,.6)),url("assets/welcome.png") center 62% / cover; }
+.badges { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px 12px; }
+.badge { text-align:center; }
+.badge-art { margin:0 auto 10px; width:min(100%,120px); aspect-ratio: .86; background:linear-gradient(140deg,var(--accent),#698833); clip-path:polygon(50% 0,100% 23%,100% 72%,50% 100%,0 72%,0 23%); display:flex; flex-direction:column; align-items:center; justify-content:center; color:#111510; box-shadow:inset 0 0 30px #111510; }
+.badge-art span { font-size:3rem; line-height:1.2; }
+.badge-art small { color:#111510; border-top:2px solid #111510; margin-top:8px; }
+.badge:nth-child(even) .badge-art { background:linear-gradient(140deg,#ffadd0,var(--secondary)); }
+.badge.locked .badge-art { filter:saturate(.35); opacity:.55; }
+.badge strong { font-size:.95rem; }
+.badge p { font-size:.75rem; line-height:1.35; margin-top:5px; }
+@media(max-width:480px) { .welcome-hero{min-height:690px} .welcome-hero p{max-width:24ch} }

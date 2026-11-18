@@ -121,7 +121,7 @@ function checks(name, values, selected = []) {
 }
 function setup() {
   const p = state.profile || {};
-  return `<div class="hero"><div class="eyebrow">THE STARTER WEEK</div><h1>Meet the you you’ve never known.</h1><p>Tell us what you have at home and how much time you have. We’ll guide you through your first workout.</p></div>
+  return `<div class="hero welcome-hero"><div class="eyebrow">THE STARTER WEEK</div><h1>Meet the you you’ve never known.</h1><p>Tell us what you have at home and how much time you have. We’ll guide you through your first workout.</p><a class="start-link" href="#setup">Build my plan →</a></div>
     <form id="setup"><fieldset><legend>Your training</legend><div class="grid">
     <label>Primary goal<select name="goal">${options(goals,p.goal)}</select></label>
     <label>Starting point<select name="level">${options(startingLevels,p.level)}</select></label>
@@ -168,7 +168,7 @@ function start(short) {
 function today() {
   if (state.session) return workout();
   const p = state.profile, s = stats();
-  return `<div class="hero"><div class="eyebrow">WEEK 01 / YOUR NEXT SESSION</div><h1>${state.workouts.length ? 'Ready to train?' : 'Your first workout'}</h1><p>${p.goal} · ${p.minutes} min available · ${p.days} days per week</p>
+  return `<div class="hero today-hero"><div class="eyebrow">WEEK 01 / YOUR NEXT SESSION</div><h1>${state.workouts.length ? 'Ready to train?' : 'Your first workout'}</h1><p>${p.goal} · ${p.minutes} min available · ${p.days} days per week</p>
   <div class="row"><button class="primary" data-action="start">Start workout</button><button data-action="short">Short on Time · 10 min</button></div></div>
   <section><h2>This week</h2><p>${s.count} of ${s.target} workouts · ${s.streak} week streak</p><progress value="${Math.min(s.count,s.target)}" max="${s.target}" aria-label="Weekly workouts"></progress></section>
   <section><h2>Your setup</h2><p>${p.gear.length ? p.gear.join(' · ') : 'Clear floor space'}</p><p>Short sessions count toward your weekly goal when you complete all their sets.</p></section>`;
@@ -224,7 +224,7 @@ function progress() {
     ['★','Starter Finisher',s.best >= 1,'Meet your weekly workout goal']
   ];
   return `<div class="hero"><div class="eyebrow">YOUR TRAINING LOG</div><h1>Progress</h1><p>${count} workouts · ${s.streak} current streak · ${s.best} best streak (weeks)</p></div>
-  <section><h2>Badges</h2><ul class="log">${badges.map(([icon,title,earned,rule]) => `<li><strong>${earned ? icon : '○'} ${title}</strong> · ${earned ? 'Earned' : rule}</li>`).join('')}</ul></section>
+  <section><h2>Badges</h2><div class="badges">${badges.map(([icon,title,earned,rule],index) => `<div class="badge ${earned ? 'earned' : 'locked'}"><div class="badge-art"><span>${icon}</span><small>${String(index+1).padStart(2,'0')}</small></div><strong>${title}</strong><p>${earned ? 'Earned' : rule}</p></div>`).join('')}</div></section>
   <section><h2>Personal bests by setup</h2>${count ? `<ul class="log">${bestSets().map(set => `<li>${escapeHtml(set.name)}${set.detail ? ' · '+escapeHtml(set.detail) : ''} · ${set.reps} reps</li>`).join('')}</ul>` : '<p>Log a workout to see your best sets.</p>'}</section>
   <section><h2>Workout history</h2>${state.workouts.slice().reverse().map(w => `<details><summary>${date(w.time)} · ${w.comeback ? 'Comeback' : w.short ? 'Short' : 'Full'} workout · ${w.sets.length} sets</summary>
     ${w.feeling ? `<p>Afterward · ${escapeHtml(w.feeling)}</p>` : ''}
