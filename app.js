@@ -361,13 +361,13 @@ document.addEventListener('click',event => {
       state.checks = state.checks.filter(row => row.time !== +button.dataset.id);
       break;
     case 'reset':
-      if (!confirm('Permanently delete all FormForge data from this browser?')) return;
+      if (!confirm('Permanently delete all MeRenovo data from this browser?')) return;
       state = empty();
       page = 'Setup';
       break;
     case 'export': {
       const url = URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));
-      const link = Object.assign(document.createElement('a'),{href:url,download:'formforge-data.json'});
+      const link = Object.assign(document.createElement('a'),{href:url,download:'merenovo-data.json'});
       link.click();
       setTimeout(() => URL.revokeObjectURL(url),1000);
       return;

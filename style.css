@@ -47,3 +47,36 @@ button:focus-visible, input:focus-visible, select:focus-visible { outline-color:
 .badge strong { font-size:.95rem; }
 .badge p { font-size:.75rem; line-height:1.35; margin-top:5px; }
 @media(max-width:480px) { .welcome-hero{min-height:690px} .welcome-hero p{max-width:24ch} }
+/* MeRenovo palette drawn from the supplied master logo. */
+:root {
+  color-scheme: light;
+  --bg: #f5f9fa;
+  --panel: #ffffff;
+  --line: #cbdde1;
+  --ink: #003662;
+  --muted: #456775;
+  --accent: #16c6d8;
+  --secondary: #076b8d;
+}
+body { background: radial-gradient(ellipse at top right,#e3f6f3,var(--bg) 65%); }
+header { background: #fff; }
+.brand { display:block; width:122px; height:110px; overflow:hidden; }
+.brand img { display:block; width:122px; height:122px; object-fit:contain; }
+header small { color:#076b8d; }
+.hero { background:linear-gradient(125deg,#e0f5f4,#f4f9e8); }
+h1 { font-family:"Avenir Next",Arial,sans-serif; text-transform:none; font-style:normal; font-weight:800; }
+button,select,input:not([type=checkbox]) { background:#fff; color:var(--ink); }
+button.primary,button[aria-current=page],.start-link { background:var(--accent); color:#002b50; }
+button.primary:hover { background:#68dce6; }
+.check:has(input:checked) { background:#e0f5f4; border-color:#076b8d; }
+nav { background:#fff; }
+.welcome-hero { background:linear-gradient(180deg,rgba(0,29,67,.86),rgba(0,29,67,.08) 70%),url("assets/welcome.png") center 65% / cover; color:#fff; }
+.welcome-hero h1 { font-style:normal; }
+.welcome-hero p { color:#fff; }
+.today-hero { background:linear-gradient(90deg,rgba(0,29,67,.94),rgba(0,29,67,.55)),url("assets/welcome.png") center 62% / cover; color:#fff; }
+.today-hero p { color:#e0f5f4; }
+.eyebrow { color:#076b8d; }
+.welcome-hero .eyebrow,.today-hero .eyebrow { color:#9fd23f; }
+.badge-art { background:linear-gradient(140deg,#16c6d8,#9fd23f); color:#003662; }
+.badge:nth-child(even) .badge-art { background:linear-gradient(140deg,#ffd02c,#9fd23f); }
+.badge-art small { color:#003662; border-color:#003662; }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+  <title id="title">MeRenovo logo</title>
+  <desc id="desc">A fluid turquoise, green, and yellow form resolves into a deep blue hexagon above the MeRenovo wordmark.</desc>
+  <defs>
+    <filter id="tile-shadow" x="-25%" y="-25%" width="150%" height="165%">
+      <feDropShadow dx="0" dy="28" stdDeviation="25" flood-color="#153443" flood-opacity="0.28"/>
+    </filter>
+    <linearGradient id="tile-fill" x1="140" y1="100" x2="850" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F8FAFB"/>
+    </linearGradient>
+    <linearGradient id="upper-gradient" x1="205" y1="485" x2="710" y2="165" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#16C6D8"/><stop offset="0.32" stop-color="#20BDAA"/><stop offset="0.63" stop-color="#9FD23F"/><stop offset="1" stop-color="#FFD02C"/>
+    </linearGradient>
+    <radialGradient id="upper-light" cx="0" cy="0" r="1" gradientTransform="translate(506 390) rotate(-30) scale(255 175)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.58"/><stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0.08"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lower-gradient" x1="540" y1="250" x2="525" y2="650" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EDA20A"/><stop offset="0.28" stop-color="#CDA828"/><stop offset="0.51" stop-color="#168D92"/><stop offset="0.73" stop-color="#076B8D"/><stop offset="1" stop-color="#003662"/>
+    </linearGradient>
+    <linearGradient id="lower-depth" x1="260" y1="430" x2="620" y2="640" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#004F69" stop-opacity="0.60"/><stop offset="0.55" stop-color="#006B84" stop-opacity="0.12"/><stop offset="1" stop-color="#001E4B" stop-opacity="0.40"/>
+    </linearGradient>
+    <linearGradient id="droplet-gradient" x1="215" y1="278" x2="258" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#79D477"/><stop offset="1" stop-color="#0FB6A7"/>
+    </linearGradient>
+    <linearGradient id="word-gradient" x1="160" y1="725" x2="820" y2="835" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00365B"/><stop offset="0.52" stop-color="#002B50"/><stop offset="1" stop-color="#001D43"/>
+    </linearGradient>
+  </defs>
+  <rect id="app-tile" x="72" y="72" width="856" height="856" rx="184" fill="url(#tile-fill)" filter="url(#tile-shadow)"/>
+  <g id="brand-symbol">
+    <path id="structured-lower-form" d="M755 267 L755 505 Q755 518 744 525 L531 650 Q518 658 505 650 L433 606 C409 591 385 586 359 590 C323 595 300 582 293 552 L287 529 C281 509 268 500 245 501 C301 485 326 455 363 445 C402 434 438 452 479 446 C528 438 555 397 594 348 C640 290 693 260 755 267 Z" fill="url(#lower-gradient)"/>
+    <path id="lower-depth-overlay" d="M238 493 C281 501 316 458 363 445 C404 434 440 453 480 446 C527 438 553 400 590 353 C554 447 475 552 359 590 C323 595 300 582 293 552 L287 529 C281 509 265 500 238 501 Z" fill="url(#lower-depth)"/>
+    <path id="organic-upper-form" d="M755 267 C695 258 642 289 595 350 C555 401 529 440 480 447 C438 453 403 435 362 446 C323 456 299 491 264 501 C229 511 201 493 194 462 C186 427 204 394 237 374 C269 355 281 339 279 314 C276 282 291 255 320 237 C343 223 369 218 397 220 C452 224 483 207 519 171 C550 140 587 137 621 154 L744 230 Q766 242 755 267 Z" fill="url(#upper-gradient)"/>
+    <path id="upper-light-overlay" d="M755 267 C695 258 642 289 595 350 C555 401 529 440 480 447 C438 453 403 435 362 446 C323 456 299 491 264 501 C292 470 326 449 365 438 C408 426 440 445 478 438 C522 430 550 390 590 341 C637 283 692 255 755 267 Z" fill="url(#upper-light)"/>
+    <path id="white-transition" d="M264 501 C299 491 323 456 362 446 C403 435 438 453 480 447 C529 440 555 401 595 350 C642 289 695 258 755 267" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+    <path id="turquoise-edge" d="M264 501 C299 491 323 456 362 446" fill="none" stroke="#36C8D2" stroke-width="5" stroke-linecap="round" opacity="0.65"/>
+    <path id="detached-droplet" d="M222 284 C234 273 251 270 258 276 C264 283 259 302 249 315 C239 327 224 329 215 321 C205 312 210 295 222 284 Z" fill="url(#droplet-gradient)"/>
+  </g>
+  <g id="wordmark" aria-label="MeRenovo">
+    <text x="130" y="784" textLength="740" lengthAdjust="spacingAndGlyphs" font-family="Avenir Next, Avenir, Helvetica Neue, Arial, sans-serif" font-size="137" font-weight="700" letter-spacing="-7" fill="url(#word-gradient)">MeRenovo</text>
+  </g>
+</svg>
